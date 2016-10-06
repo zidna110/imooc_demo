@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下，你就知道</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+       /* text-decoration: none;*/
+        font-size: 14px;
+	}
+	body{
+		width: 100%
+		
+	}
+	.head{
+		width: 100%
+		margin:0 auto;
+		background-color:#000;
+	}
+	.header-nav{
+		margin-right: 6px;
+		margin-top: 20px;
+	}
+	
+	.header-nav {
+		float: right;
+	}
+	.header-nav li {
+		float: right;
+	}
+    .header-nav li a{
+    	color: #000;
+    	height: 30px;
+    	text-align:center;
+    	line-height: 30px;
+    	padding-right: 20px;
+    	font-family: "微软雅黑"
+
+    }
+    .header-nav li span{
+    	background-color:#317EF3;
+    	height: 30px;
+        color: #fff;
+    	text-align:center;
+    	line-height: 30px;
+    	padding-right: 10px;
+    	font-family: "微软雅黑"
+        
+    }
+    .header-nav li a:hover{
+    	color: blue;
+    }
+    .main{
+    	position: absolute;top: 50px;left: 350px;
+    }
+    .main-logo img{
+    	margin-left: 200px;
+        margin-bottom: 30px;
+    }
+    .search-form{
+    	padding-right: 10px;
+    }
+    .search-bg{
+    	position: relative;
+    	width: 539px;
+    	height: 36px;
+    	border: 1px solid #b8b8b8;
+    }
+   
+    .search-btn{
+    	border: 0;
+    	height: 36px;
+    	width: 100%;
+    	line-height: 36px;
+    	outline: none;
+
+    }
+    .submit-btn1{
+    	position: absolute;
+    	right: 11px;
+    	top:30%;
+    	border: 0;
+        width: 18px;
+        height: 16px;
+        background-image: url(logo2.png)
+       
+    }
+    .submit-btn2{
+    	position: absolute;
+    	left: 540px;
+    	bottom: 0px;
+        width: 100px;
+        height: 38px;
+        border: 1px solid #b8b8b8;
+        font-size: 15px;
+        background-color: #317EF3;
+        color: #fff;
+        
+    }
+    footer{
+    	position: absolute;
+    	top:500px;
+    	left: 360px;
+    }
+    #qrcode {
+    display: inline-block;
+    line-height: 25px;
+    }
+    #qrcode .code1 .codeimg{
+    	background-image: url(zbios.png);
+    	width: 60px;
+    	height: 60px;
+    	
+    }
+
+    #qrcode .code2 .codeimg{
+    	background-image: url(nuomi.png);
+    	width: 60px;
+    	height: 60px;
+    
+    }
+    #code{
+    	display: inline-block;
+    	
+    }
+    .code1{
+    	float: left;
+
+    }
+    .code2{
+    	float: left;
+    	margin-left:30px;
+    }
+    .codeimg{
+    	float: left;
+    }
+    .codetxt{
+    	float: left;
+        font-size:10px;
+        margin: 8px 0 0 10px;
+
+    }
+
+    #bdmennu{
+    	float: right;
+    	margin-left: 30px;
+    	margin-top: -10px;
+        line-height: 25px;
+    }
+    #bdmennu  a{
+    	font-size: 8px;
+    	color: #999;
+    }
+    #bdmennu  p{
+    	font-size: 8px;
+    	color: #999;
+    }
+    #sidebar{
+    	position: fixed;
+    	top:0;
+    	bottom: 0;
+    	right: 0;
+    	width: 80px;
+    	background-color: #999;
+    	display: none;
+    }
+    #sidebar ul a{
+    	display: inline-block;
+    	padding: 26px;
+    	font-size: 12px;
+    }
+      #sidebar ul a:hover{
+    	background:  #777;
+    }
+   	</style>
+    
+</head>
+<body>
+	<header class="head">
+		<nav class="header-nav">
+			<ul>
+			    <li><span href="">更多产品</span></li>
+				<li><a href="">糯米</a></li>
+				<li><a href="">新闻</a></li>
+				<li><a href="">hao123</a></li>
+				<li><a href="">地图</a></li>
+				<li><a href="">视频</a></li>
+				<li><a href="">贴吧</a></li>
+				<li><a href="">登录</a></li>
+				<li><a href="">设置</a></li>
+
+			</ul>
+			
+			
+		</nav>
+	</header>
+	<div id="sidebar">
+		<ul>
+			<li><a href="">音乐</a></li>
+			<li><a href="">图片</a></li>
+			<li><a href="">知道</a></li>
+			<li><a href="">文库</a></li>
+			<li><a href="">风云榜</a></li>
+			<li><a href="">全部产品</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	<div class="container">
+	    <div class="main">
+		<div class="main-logo"><img src="bd_logo1.png" alt="" width="270" height="129"></div>
+		<form>
+		    <div class="search-bg">
+		    	<input type="text" class="search-btn"/>
+		        <input type="submit" class="submit-btn1" value=" "/>
+		    </div>
+		    
+	        <input type="submit" class="submit-btn2" value="百度一下"/>
+		</form>
+		</div>
+	</div>
+	<footer>
+		<div id="qrcode">
+			<div class="code1">
+				<div class="codeimg"></div>
+				<div class="codetxt">
+					<p>手机百度</p>
+					<p>快人一步</p>
+				</div>
+			</div>
+			<div class="code2">
+				<div class="codeimg"></div>
+				<div class="codetxt">
+					<p>百度糯米</p>
+					<p>一减到底</p>
+				</div>
+			</div>
+		</div>
+		<div id="bdmennu">
+			<p><a href="">把百度设为首页</a>
+			<a href="">关于百度</a>
+			<a href="">About Baidu</a>
+			<a href="">百度推广</a></p>
+			<p>©2016 Baidu 使用百度前必读 意见反馈 京ICP证030173号 </p>
+			<p>京公网安备11000002000001号</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

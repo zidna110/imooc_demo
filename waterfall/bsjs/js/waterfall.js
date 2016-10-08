@@ -1,5 +1,24 @@
 window.onload=function(){
 	waterfall("main","box");
+	var dataInt={"data":[{"src":24.jpg},{"src":25.jpg},{"src":26.jpg},{"src":27.jpg},{"src":28.jpg},{"src":29.jpg}]}
+	window.onscroll=function(){
+		if(checkScroolSlide){
+			var oParent=document.getElementById('main');
+          //渲染数据
+          for(var o=1;i<dataInt.data.length;i++){
+          	var oBox=document.creatElemrnt('div');
+          	oBoxs.className='box';
+          	oParent.appendChild(oBox);
+          	var oPic=document.creatElemrnt('div');
+          	oPic.className='pic';
+          	oBox.appendChild(oPic);
+          	var oImg=document.creatElemrnt('img');
+          	oImg.src="images/"+dataInt.data[i].src;
+          	oPic.appendChild(oImg);
+          }
+		}
+		
+	}
 }
 
 function waterfall(parent,box){
@@ -25,7 +44,7 @@ function waterfall(parent,box){
 			hArr[index]+=oBoxs[i].offsetHeight;
 		}
 	}
-	console.log(hArr);
+	
 }
 
 //根据Class获取元素
@@ -45,5 +64,14 @@ for(var i in arr){
 	if(arr[i]==val){
 		return i;
 	}
+  }
 }
+
+function checkScroolSlide(){
+	var oParent=document.getElementById('main');
+	var oBoxs=getByClass(oParent,'box');
+	var lsatBoxH=oBoxs[oBoxs.length-1].offsetTop+Math.floor(oBoxs[oBoxs.length-1].offsetHeight/2);
+	var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+	var height=document.body.clientHeight||document.documentElement.clientHeight;
+	return (lsatBoxH<scrollTop+height)?true:false;
 }
